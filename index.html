@@ -1,0 +1,88 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Train Scheduler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="../Train-Scheduler/assets/css and js/style.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="bg"></div>
+    <div class="jumbotron jumbotron-fluid jumbotron-flex">
+        <div class="container header">
+            <h1 id="h1-info">Train Scheduler</h1>
+            <div id="currentTime"></div>
+        </div>
+    </div>
+
+    <div class="card">
+            <div class="card-header heading">
+                <strong>
+                <h4 class="fa fa-list-alt heading">Current Employees</h4>
+                </strong>
+            </div>
+            <div class="table-responsive-lg">
+                <table id="trainTable" class="table table-bordered">    
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+            </table>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <div class="card">
+                <div class="card-header heading">
+                    <strong>
+                    <h4 class="fa fa-list-alt">Search Parameters</h4>
+                    </strong>
+                </div>
+                <div class="card-body">
+
+                    <form role="form">
+
+                    <div class="form-group">
+                        <label for="train-name">Train Name</label>
+                        <input type="text" class="form-control" id="train-name">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="train-destination">Destination</label>
+                        <input type="text" class="form-control" id="train-destination">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="first-train-time">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="first-train-time">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="train-frequency">Frequency (min)</label>
+                        <input type="text" class="form-control" id="train-frequency">
+                    </div>
+        
+                    <button type="submit" class="btn btn-secondary" id="run-search">
+                        <strong>Submit</strong>
+                    </button>
+                    </form>
+                </div>
+                </div>
+            </div>
+</div>   
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script type="text/javascript" src="../Train-Scheduler/assets/css and js/javascript.js"></script>
+<script src="../Train-Scheduler/assets/css and js/moment.min.js"></script>
+</body>
+</html>
